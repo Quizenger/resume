@@ -128,8 +128,9 @@ Programming Languages and Compilers (A)
 \subsection{Computer Architecture}
 
 Hyperscale Architecture and Systems \\ 
-Hardware/Software Co-design \\
-Profile-Guided Methods
+Hardware Design Methodology
+% Hardware/Software Co-design \\
+% Profile-Guided Methods
 
 \smallsectionsep
 
@@ -140,6 +141,7 @@ Profile-Guided Methods
 
 \section{Teaching Experience}
 
+CS152/252A - Computer Architecture and Engineering \textbullet{}
 EE290C - 22nm SoC for IoT \textbullet{} 
 EECS 151/251A -  Introduction to Digital Design
 and Integrated Circuits \textbullet{}
@@ -196,42 +198,49 @@ Times of India - Spark Scholarship (2018)
 % \vspace{\topsep} % Hacky fix for awkward extra vertical space
 % Working on computer architecture topics with graduate students in Prof. Krste Asanovic's and Prof. Borivoje Nikolic's groups. 
 
-\descript{Multi-level Simulation | {\bf In-progress}}
-\vspace{\topsep} % Hacky fix for awkward extra vertical space
+% \descript{Hybrid Simulation/Emulation | {\bf Collaboration with AMD/Xilinx} | {\bf Sep 2024 - Present}}
+\descript{Hybrid Simulation/Emulation}
+\location{Collaboration with AMD/Xilinx | Sep 2024 - Present}
+\vspace{\topsep}
 {\normalsize
 \begin{tightemize}
-\item Building a multi-level simulator that trades-off speed and fidelity in a hierarchy of simulators to enable DSE on large workloads
-\item Using program analysis to identify critical portions of an execution trace to execute at high fidelity
-\item Investigating warm-up strategies to approximate cache state 
+\item Building a hybrid simulation/emulation platform atop FireSim to enable design verification and early DSE 
+\item Initial prototype allows system bus modules to be simulated in C++ while the rest of the SoC is emulated on an FPGA
+\item Initial results show O(10 MHz) simulation frequency when running Linux+Coremark and snooping on SoC memory requests in software 
 \end{tightemize}
 }
 
-
-\descript{Accelerating Hyperscale RPCs | {\bf In-progress}}
+\descript{Multi-level Simulation}
+\location{Oct 2023 - Apr 2024}
+% \descript{Multi-level Simulation} | {\bf Oct 2023 - Apr 2024}}
+% \vspace{\topsep} % Hacky fix for awkward extra vertical space
 {\normalsize
 \begin{tightemize}
-\item Investigating orchestration to offload RPCs to a collection of accelerators
-\item Working on porting the RPC software stack to RISC-V
+\item Helped build a multi-level simulator trading off speed and fidelity in a hierarchy of simulators for DSE on large workloads
+\item Used program analysis to identify critical portions of an execution trace to execute at high fidelity
+\item Investigated warm-up strategies to approximate cache state 
 \end{tightemize}
 }
 
-\descript{Extending FirePerf to Userspace |  \href{https://dl.acm.org/doi/pdf/10.1145/3373376.3378455}{\bf Original Paper} | \href{https://docs.google.com/gview?url=https://github.com/Quizenger/cv/raw/main/resources/FirePerf_Poster.pdf}{\bf Poster} | \href{https://docs.google.com/gview?url=https://github.com/Quizenger/cv/raw/main/resources/FirePerf_Paper.pdf}{\bf Userspace Paper}}
+% \descript{Extending FirePerf to Userspace |  \href{https://dl.acm.org/doi/pdf/10.1145/3373376.3378455}{\bf Original Paper} | \href{https://docs.google.com/gview?url=https://github.com/Quizenger/cv/raw/main/resources/FirePerf_Poster.pdf}{\bf Poster} | \href{https://docs.google.com/gview?url=https://github.com/Quizenger/cv/raw/main/resources/FirePerf_Paper.pdf}{\bf Userspace Paper}}
+\descript{Extending FirePerf to Userspace}
+\location{\href{https://dl.acm.org/doi/pdf/10.1145/3373376.3378455}{Original Paper} | \href{https://docs.google.com/gview?url=https://github.com/Quizenger/cv/raw/main/resources/FirePerf_Poster.pdf}{Poster} | \href{https://docs.google.com/gview?url=https://github.com/Quizenger/cv/raw/main/resources/FirePerf_Paper.pdf}{Userspace Paper}}
 
 \begin{tightemize}
 {\normalsize
-\item An FPGA-accelerated full-system hardware/software performance profiling utility that provides high-fidelity out-of-band introspection with call stack reconstruction and Flame Graph generation
+\item FirePerf is an FPGA-accelerated full-system hardware/software performance profiling utility that provides high-fidelity out-of-band introspection with call stack reconstruction and Flame Graph generation
 \item Extended FirePerf to support userspace profiling by instrumenting the Rocket Chip trace port, obtaining DWARF + hex information, constructing a user binary search space and matching traces to it
 }
 \end{tightemize}
 
-\descript{FireMarshal Networking |  \href{https://ieeexplore.ieee.org/abstract/document/9408192/}{\bf Original Paper}}
-\begin{tightemize}
-{\normalsize
-\item FireMarshal is an open-source software workload management tool that automates bootable workload image generation and evaluation
-%\item Implemented running multi-node workloads concurrently in QEMU
-\item Implemented concurrent execution of multi-node workloads in QEMU and a network interface using Virtual Distributed Etherne
-}
-\end{tightemize}
+% \descript{FireMarshal Networking |  \href{https://ieeexplore.ieee.org/abstract/document/9408192/}{\bf Original Paper}}
+% \begin{tightemize}
+% {\normalsize
+% \item FireMarshal is an open-source software workload management tool that automates bootable workload image generation and evaluation
+% %\item Implemented running multi-node workloads concurrently in QEMU
+% \item Implemented concurrent execution of multi-node workloads in QEMU and a network interface using Virtual Distributed Etherne
+% }
+% \end{tightemize}
 
 % \vspace{\topsep}
 
@@ -240,18 +249,31 @@ Times of India - Spark Scholarship (2018)
 %\topsep
 % \vspace{\topsep}
 \section{Work Experience}
-\runsubsection{Omnistrate}
-\descript{| Software Engineering Intern}
-\location{May 2023 – July 2023 | Remote }
-%\vspace{\topsep} % Hacky fix for awkward extra vertical space
-\descript{Monitoring for Stateful Containerized Cloud Applications}
+
+\runsubsection{AMD/Xilinx}
+\descript{| Research and Advanced Development Intern}
+\location{Jun 2024 – Dec 2024 | San Jose, CA }
+% \vspace{\topsep} % Hacky fix for awkward extra vertical space
+\descript{Hybrid Simulation/Emulation}
 {\normalsize
 \begin{tightemize}
-%\item Developed monitoring infrastructure for stateful containers using the sidecar pattern
-\item Implemented support for application-specific probes and process metadata checks in a sidecar to trigger alerts and fail-over
-\item Improved reliability at scale for a public database provider's DBaaS offering
+\item Implemented and evaluated two strategies to build a fast and flexible hybrid simulation/emulation platform
+\item Ported an internal co-simulation framework and an open-source emulation framework to an internal emulation machine
 \end{tightemize}
 }
+
+% \runsubsection{Omnistrate}
+% \descript{| Software Engineering Intern}
+% \location{May 2023 – July 2023 | Remote }
+% %\vspace{\topsep} % Hacky fix for awkward extra vertical space
+% \descript{Monitoring for Stateful Containerized Cloud Applications}
+% {\normalsize
+% \begin{tightemize}
+% %\item Developed monitoring infrastructure for stateful containers using the sidecar pattern
+% \item Implemented support for application-specific probes and process metadata checks in a sidecar to trigger alerts and fail-over
+% \item Improved reliability at scale for a public database provider's DBaaS offering
+% \end{tightemize}
+% }
 
 \vspace{\topsep}
 \runsubsection{NVIDIA}
@@ -275,10 +297,12 @@ Times of India - Spark Scholarship (2018)
 \section{Publications/Presentations}
 \vspace{\topsep}
 \begin{tightemize}
-% \item Whangbo, Joonho, Edwin Lim, Chengyi Lux Zhang, Kevin Anderson, Abraham Gonzalez,\custombold{ Raghav Gupta,} Nivedha Krishnakumar, et al. \custombold{"FireAxe: Multi-FPGA Simulation for Scale-Up Hardware Designs."} (Under submission)
-\item <Anonymized> x5,\custombold{ Raghav Gupta,} <Anonymized>, et al. \custombold{"Partitioning Large-Scale Monolithic Hardware Designs for FireSim."} (Under submission)
+% \item Whangbo, Joonho, Edwin Lim, Chengyi Lux Zhang, Kevin Anderson, Abraham Gonzalez,\custombold{ Raghav Gupta,} Nivedha Krishnakumar, et al. \custombold{"FireAxe: Partitioned FPGA-Accelerated Simulation of Large-Scale RTL Designs,"} in Proceedings of the 2024 ACM/IEEE 51st Annual International Symposium on Computer Architecture (ISCA), 2024.
+\item Whangbo, Joonho, et al. \custombold{"FireAxe: Partitioned FPGA-Accelerated Simulation of Large-Scale RTL Designs,"} ISCA 2024.
+% , pp. 501–515, doi: 10.1109/ISCA59077.2024.00044."
+% \item <Anonymized> x5,\custombold{ Raghav Gupta,} <Anonymized>, et al. \custombold{"Partitioning Large-Scale Monolithic Hardware Designs for FireSim."} (Under submission)
 % \item Whangbo, J., Lim, E., Zhang, C.L., Anderson, K., Gonzalez, A.,\custombold{ Gupta, R.}, Krishnakumar, N., Karandikar, S., Shao, Y. S., Nikolic, B., \& Asanovic, K. \custombold{Partitioning Large-Scale Monolithic Designs for FireSim.} (Under submission)
-\item Chi, Yufeng, Franklin Huang,\custombold{ Raghav Gupta,} Ella Schwarz, Jennifer Zhou, Reza Sajadiany, Animesh Agrawal, et al. \href{https://hc2023.hotchips.org/assets/program/posters/HC2023.UCBerkeley.YufengChi.Poster.v06.pdf} {\custombold{"A Heterogeneous RISC-V SoC for ML Applications in Intel 16 Technology."}} Poster presented at HotChips 2023, Stanford, CA, August 27-28, 2023.
+\item Chi, Yufeng, Franklin Huang,\custombold{ Raghav Gupta,} Ella Schwarz, Jennifer Zhou, Reza Sajadiany, Animesh Agrawal, et al. \href{https://hc2023.hotchips.org/assets/program/posters/HC2023.UCBerkeley.YufengChi.Poster.v06.pdf} {\custombold{"A Heterogeneous RISC-V SoC for ML Applications in Intel 16 Technology."}} Poster presented at HotChips 2023, Stanford, CA.
 \end{tightemize}
 \end{minipage} 
 \end{document}  \documentclass[]{article}
